@@ -2,21 +2,21 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Created by melle on 29-9-2015.
+ * Created by Melle Dijkstra on 29-9-2015 - 21:19.
  */
-public class verkeersLicht extends JPanel {
-    private boolean groen;
+public class Trafficlight extends JPanel {
+    private boolean green;
     private boolean orange;
-    private boolean rood;
+    private boolean red;
 
-    private Rechthoek rechthoek;
+    private myRect rect;
     private Circle circleRED;
     private Circle circleORANGE;
     private Circle circleGREEN;
 
-    public verkeersLicht() {
+    public Trafficlight() {
         setBackground(Color.WHITE);
-        rechthoek = new Rechthoek(Color.BLACK, 52, 50, 50, 135);
+        rect = new myRect(Color.BLACK, 52, 50, 50, 135);
         circleRED = new Circle(Color.RED, 60, 60, 32, 32);
         circleORANGE = new Circle(Color.ORANGE, 60, 100, 32, 32);
         circleGREEN = new Circle(Color.GREEN, 60, 140, 32, 32);
@@ -24,9 +24,9 @@ public class verkeersLicht extends JPanel {
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        rechthoek.teken(g);
-        circleRED.teken(g);
-        circleORANGE.teken(g);
-        circleGREEN.teken(g);
+        rect.draw(g);
+        circleRED.draw(g);
+        circleORANGE.draw(g);
+        circleGREEN.draw(g);
     }
 }

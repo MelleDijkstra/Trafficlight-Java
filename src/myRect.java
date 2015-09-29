@@ -3,25 +3,25 @@ import java.awt.*;
 /**
  * Created by melle_000 on 2015-09-29.
  */
-public class Circle {
+public class myRect {
     // values
     private int x;
     private int y;
-    private int breedte;
-    private int hoogte;
+    private int width;
+    private int height;
     private Color color;
 
     // constructor
-    public Circle(Color color, int x, int y, int breedte, int hoogte) {
+    public myRect(Color color, int x, int y, int width, int height) {
         this.color = color;
         this.x = x;
         this.y = y;
-        this.breedte = breedte;
-        this.hoogte = hoogte;
+        this.width = width;
+        this.height = height;
     }
 
     public void draw(Graphics pen) {
         pen.setColor(color);
-        pen.fillOval(x,y,breedte,hoogte);
+        pen.fillRect(x,y, width, height);
     }
 }
