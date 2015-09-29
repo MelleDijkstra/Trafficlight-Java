@@ -11,29 +11,32 @@ public class Vb0602 extends JFrame {
         JFrame win = new JFrame("Traffic Light - Page 167/170");
         win.setSize(300,350);
         win.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        win.setBackground(Color.BLACK);
 
         // make trafficlight
         Trafficlight trafficlight = new Trafficlight();
         JButton resetBtn = new JButton("Reset");
         resetBtn.setActionCommand("reset");
         resetBtn.addActionListener(e -> {
-            // TODO make reset action
-            System.out.println("add reset action");
+            trafficlight.getLight("red").on(false);
+            trafficlight.getLight("orange").on(false);
+            trafficlight.getLight("green").on(false);
+            trafficlight.repaint();
         });
         JButton redBtn = new JButton("Red");
         redBtn.addActionListener(e -> {
-            // TODO make redBtn action
-            System.out.println("add redBtn action");
+            trafficlight.getLight("red").on(true);
+            trafficlight.repaint();
         });
         JButton orangeBtn = new JButton("Orange");
         orangeBtn.addActionListener(e -> {
-            // TODO make orangeBtn action
-            System.out.println("add orangeBtn action");
+            trafficlight.getLight("orange").on(true);
+            trafficlight.repaint();
         });
         JButton greenBtn = new JButton("Green");
         greenBtn.addActionListener(e -> {
-            // TODO make greenBtn action
-            System.out.println("add greenBtn action");
+            trafficlight.getLight("green").on(true);
+            trafficlight.repaint();
         });
 
         // add buttons to trafficlight

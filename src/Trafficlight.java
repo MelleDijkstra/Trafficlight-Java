@@ -10,23 +10,76 @@ public class Trafficlight extends JPanel {
     private boolean red;
 
     private myRect rect;
-    private Circle circleRED;
-    private Circle circleORANGE;
-    private Circle circleGREEN;
+    private Circle circleRed;
+    private Circle circleOrange;
+    private Circle circleGreen;
+
+    public boolean isGreen() {
+        return green;
+    }
+
+    public void setGreen(boolean green) {
+        this.green = green;
+    }
+
+    public boolean isOrange() {
+        return orange;
+    }
+
+    public void setOrange(boolean orange) {
+        this.orange = orange;
+    }
+
+    public boolean isRed() {
+        return red;
+    }
+
+    public void setRed(boolean red) {
+        this.red = red;
+    }
+
+    public myRect getRect() {
+        return rect;
+    }
+
+    public Circle getCircleRed() {
+        return circleRed;
+    }
+
+    public Circle getCircleOrange() {
+        return circleOrange;
+    }
+
+    public Circle getCircleGreen() {
+        return circleGreen;
+    }
 
     public Trafficlight() {
         setBackground(Color.WHITE);
         rect = new myRect(Color.BLACK, 52, 50, 50, 135);
-        circleRED = new Circle(Color.RED, 60, 60, 32, 32);
-        circleORANGE = new Circle(Color.ORANGE, 60, 100, 32, 32);
-        circleGREEN = new Circle(Color.GREEN, 60, 140, 32, 32);
+        circleRed = new Circle(Color.RED, 60, 60, 32, 32);
+        circleOrange = new Circle(Color.ORANGE, 60, 100, 32, 32);
+        circleGreen = new Circle(Color.GREEN, 60, 140, 32, 32);
     }
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         rect.draw(g);
-        circleRED.draw(g);
-        circleORANGE.draw(g);
-        circleGREEN.draw(g);
+        circleRed.draw(g);
+        circleOrange.draw(g);
+        circleGreen.draw(g);
+    }
+
+    public Circle getLight(String color) {
+        switch(color) {
+            case "green":
+                return circleGreen;
+            case "orange":
+                return circleOrange;
+            case "red":
+                return circleRed;
+            default:
+                return null;
+        }
     }
 }

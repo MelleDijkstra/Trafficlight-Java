@@ -4,7 +4,7 @@ import java.awt.*;
  * Created by melle_000 on 2015-09-29.
  */
 public class myRect {
-    // values
+    // init values
     private int x;
     private int y;
     private int width;
@@ -22,6 +22,6 @@ public class myRect {
 
     public void draw(Graphics pen) {
         pen.setColor(color);
-        pen.fillRect(x,y, width, height);
+        pen.fillRect(x,y,width,height);
     }
 }
