@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="pagina_167_Stoplicht:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/pagina_167_Stoplicht_jar</output-path>
+    <root id="archive" name="pagina_167_Stoplicht.jar">
+      <element id="module-output" name="pagina_167_Stoplicht" />
+    </root>
+  </artifact>
+</component>
