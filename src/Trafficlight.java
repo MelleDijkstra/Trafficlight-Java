@@ -5,10 +5,12 @@ import java.awt.*;
  * Created by Melle Dijkstra on 29-9-2015 - 21:19.
  */
 public class Trafficlight extends JPanel {
+    // Track which lights are switchLight
     private boolean green;
     private boolean orange;
     private boolean red;
 
+    // The different graphical components
     private myRect rect;
     private Circle circleRed;
     private Circle circleOrange;
@@ -54,6 +56,7 @@ public class Trafficlight extends JPanel {
         return circleGreen;
     }
 
+    // Constructor for the trafficlight
     public Trafficlight() {
         setBackground(Color.WHITE);
         rect = new myRect(Color.BLACK, 52, 50, 50, 135);
@@ -62,6 +65,7 @@ public class Trafficlight extends JPanel {
         circleGreen = new Circle(Color.GREEN, 60, 140, 32, 32);
     }
 
+    // Paint everything from the trafficlight to the window (screen)
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         rect.draw(g);
@@ -70,6 +74,7 @@ public class Trafficlight extends JPanel {
         circleGreen.draw(g);
     }
 
+    // Get a light from the trafficlight by color
     public Circle getLight(String color) {
         switch(color) {
             case "green":

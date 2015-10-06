@@ -32,11 +32,12 @@ public class Circle {
         this.color = color;
     }
 
+    // Specify if the circle is filled or not
     public void setFill(boolean fill) {
         this.fill = fill;
     }
 
-    // constructor
+    // constructor with setting fill option
     public Circle(Color color, int x, int y, int width, int height, boolean fill) {
         this.color = color;
         this.x = x;
@@ -46,6 +47,7 @@ public class Circle {
         this.fill = fill;
     }
 
+    // constructor for circle without setting the fill
     public Circle(Color color, int x, int y, int width, int height) {
         this.color = color;
         this.x = x;
@@ -54,6 +56,7 @@ public class Circle {
         this.height = height;
     }
 
+    // draw the circle
     public void draw(Graphics pen) {
         pen.setColor(color);
         if(this.fill) {
@@ -63,7 +66,8 @@ public class Circle {
         }
     }
 
-    public void on(boolean val) {
+    // Put on the light (circle) that is currently calling this method
+    public void switchLight(boolean val) {
         this.fill = val;
     }
 }
